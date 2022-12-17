@@ -9,5 +9,3 @@ Each module should be divided into logical units that make sense for your applic
 - UserAccount
 - LandingPages
 - etc…
-
-The RootModule is the only “required” module. This is where the homepage and the 404 page reside.
