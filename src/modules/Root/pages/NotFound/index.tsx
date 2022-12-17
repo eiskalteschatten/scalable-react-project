@@ -1,9 +1,13 @@
 import React from 'react';
 
+import usePageTitle from '../../../../shared/hooks/usePageTitle';
+
 import './NotFound.module.scss';
 
 const NotFound: React.FC = () => {
   // The 404 page
+
+  usePageTitle('Page not found!');
 
   return (
     <div>
