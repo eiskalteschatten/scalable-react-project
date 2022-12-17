@@ -1,20 +1,18 @@
 import React from 'react';
 
-import usePageTitle from 'shared/hooks/usePageTitle';
-import PageHeader from 'shared/components/PageHeader';
+import { Post } from '../../interfaces/posts';
 
 import styles from './PostLink.module.scss';
 
-const PostLink: React.FC = () => {
-  usePageTitle('Posts');
+interface Props {
+  post: Post;
+}
 
+const PostLink: React.FC<Props> = ({ post }) => {
   return (
     <div className={styles.postLink}>
-      <PageHeader>
-        Posts
-      </PageHeader>
-
-
+      <h2 className={styles.title}>{post.title}</h2>
+      <div className={styles.summary}>{post.summary}</div>
     </div>
   );
 }
