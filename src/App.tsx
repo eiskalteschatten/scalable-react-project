@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import RootModule from './modules/RootModule';
 import ErrorBoundary from './shared/compoonents/ErrorBoundry';
+import RootModule from './modules/RootModule';
+import PostsModule from './modules/PostsModule';
 
 // The App.scss is where global styles should be defined such as body background color, etc.
 import './App.scss';
@@ -15,6 +16,7 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <BrowserRouter>
         <Routes>
+          <Route path='/posts' element={<PostsModule />} />
           <Route path='*' element={<RootModule />} />
         </Routes>
       </BrowserRouter>

@@ -14,6 +14,9 @@ const MainNav: React.FC = () => {
       <NavLink to='/' className={navClassName} end>
         Home
       </NavLink>
+      <NavLink to='/posts' className={navClassName}>
+        Posts
+      </NavLink>
       <NavLink to='/privacy-statement' className={navClassName} end>
         Privacy Statement
       </NavLink>
