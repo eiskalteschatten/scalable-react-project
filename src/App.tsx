@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { AppProviderWrapper } from './App.context';
-import ErrorBoundary from './shared/compoonents/ErrorBoundry';
+import ErrorBoundary from './shared/components/ErrorBoundry';
 import RootModule from './modules/RootModule';
 import PostsModule from './modules/PostsModule';
 
