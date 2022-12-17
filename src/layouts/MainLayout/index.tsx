@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 
 import Header from './Header';
+import Footer from './Footer';
 
 import styles from './MainLayout.module.scss';
 
@@ -14,6 +15,8 @@ const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <main className={styles.main}>
         {children}
       </main>
+
+      <Footer />
     </>
   );
 }
