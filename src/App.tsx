@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import HomeModule from './modules/Home';
+import RootModule from './modules/Root';
 
 // The App.scss is where global styles should be defined such as body background color, etc.
 import './App.scss';
@@ -13,7 +13,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='*' element={<HomeModule />} />
+        <Route path='*' element={<RootModule />} />
       </Routes>
     </BrowserRouter>
   );
