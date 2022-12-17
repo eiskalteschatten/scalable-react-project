@@ -2,7 +2,7 @@ import React from 'react';
 
 import usePageTitle from '../../../../shared/hooks/usePageTitle';
 
-import './NotFound.module.scss';
+import styles from './NotFound.module.scss';
 
 const NotFound: React.FC = () => {
   // The 404 page
