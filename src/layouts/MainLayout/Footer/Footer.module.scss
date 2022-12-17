@@ -2,5 +2,13 @@
   margin-top: 15px;
   padding: 15px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .copyright {
+    font-size: .9em;
+    opacity: .8;
+  }
 }
