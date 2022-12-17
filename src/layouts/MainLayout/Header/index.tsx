@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MainNav from '../MainNav';
+
 import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
@@ -8,6 +10,8 @@ const Header: React.FC = () => {
       <div className={styles.appName}>
         Awesome App
       </div>
+
+      <MainNav />
     </div>
   );
 }
