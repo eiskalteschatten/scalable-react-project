@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Homepage from './pages/Homepage';
+import NotFound from './pages/NotFound';
 
 const RootModule: React.FC = () => {
   // The RootModule is responsible for everything that happens at the root levels and all of its content.
@@ -12,9 +13,7 @@ const RootModule: React.FC = () => {
   return (
     <Routes>
        <Route path='/' element={<Homepage />} />
-
-       {/* TODO */}
-       <Route path='*' element={<div>404</div>} />
+       <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }
