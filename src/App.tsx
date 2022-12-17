@@ -1,26 +1,21 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import logo from './assets/images/logo.svg';
+import HomeModule from './modules/Home';
+
+// The App.scss is where global styles should be defined such as body background color, etc.
 import './App.scss';
 
-function App() {
+const App: React.FC = () => {
+  // The App component is the root of the application.
+  // This is where all of the modules should be registered.
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='*' element={<HomeModule />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
