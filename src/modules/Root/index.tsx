@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Homepage from './pages/Homepage';
+import PrivacyStatement from './pages/PrivacyStatement';
 import NotFound from './pages/NotFound';
 
 const RootModule: React.FC = () => {
@@ -12,6 +13,7 @@ const RootModule: React.FC = () => {
 
   return (
     <Routes>
+       <Route path='/privacy-statement' element={<PrivacyStatement />} />
        <Route path='/' element={<Homepage />} />
        <Route path='*' element={<NotFound />} />
     </Routes>
