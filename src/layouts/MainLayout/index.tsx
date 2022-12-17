@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import './MainLayout.module.scss';
 
-const MainLayout: React.FC = () => {
+const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
   // The main layout for the application
 
   return (
     <div>
-      MainLayout
+      {children}
     </div>
   );
 }
