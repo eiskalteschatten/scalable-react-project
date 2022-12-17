@@ -1,7 +1,7 @@
 import React from 'react';
 
-import usePageTitle from '../../../../shared/hooks/usePageTitle';
-import PageHeader from '../../../../shared/components/PageHeader';
+import usePageTitle from 'shared/hooks/usePageTitle';
+import PageHeader from 'shared/components/PageHeader';
 
 import styles from './PrivacyStatement.module.scss';
 

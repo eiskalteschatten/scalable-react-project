@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import useAppContext from '../../../shared/hooks/useAppContext';
+import useAppContext from 'shared/hooks/useAppContext';
 
 import styles from './Footer.module.scss';
 

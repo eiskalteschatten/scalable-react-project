@@ -1,7 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import MainLayout from '../../layouts/MainLayout';
+import MainLayout from 'layouts/MainLayout';
+
 import Homepage from './pages/Homepage';
 import PrivacyStatement from './pages/PrivacyStatement';
 import NotFound from './pages/NotFound';
