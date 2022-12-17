@@ -3,13 +3,13 @@ import React from 'react';
 import usePageTitle from 'shared/hooks/usePageTitle';
 import PageHeader from 'shared/components/PageHeader';
 
-import styles from './AllPosts.module.scss';
+import styles from './PostLink.module.scss';
 
-const AllPosts: React.FC = () => {
+const PostLink: React.FC = () => {
   usePageTitle('Posts');
 
   return (
-    <div className={styles.allPosts}>
+    <div className={styles.postLink}>
       <PageHeader>
         Posts
       </PageHeader>
@@ -19,4 +19,4 @@ const AllPosts: React.FC = () => {
   );
 }
 
-export default AllPosts;
+export default PostLink;
