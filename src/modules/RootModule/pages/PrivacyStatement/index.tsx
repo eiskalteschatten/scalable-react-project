@@ -1,6 +1,7 @@
 import React from 'react';
 
 import usePageTitle from '../../../../shared/hooks/usePageTitle';
+import PageHeader from '../../../../shared/compoonents/PageHeader';
 
 import styles from './PrivacyStatement.module.scss';
 
@@ -11,7 +12,11 @@ const PrivacyStatement: React.FC = () => {
   usePageTitle('Privacy Statement');
 
   return (
-    <div>
+    <div className={styles.privacyStatement}>
+      <PageHeader>
+        Privacy Statement
+      </PageHeader>
+
       We don't collect data, so there's nothing to see here.
     </div>
   );

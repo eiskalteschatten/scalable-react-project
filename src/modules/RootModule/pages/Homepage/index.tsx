@@ -1,6 +1,7 @@
 import React from 'react';
 
 import usePageTitle from '../../../../shared/hooks/usePageTitle';
+import PageHeader from '../../../../shared/compoonents/PageHeader';
 
 import styles from './Homepage.module.scss';
 
@@ -10,8 +11,10 @@ const Homepage: React.FC = () => {
   usePageTitle();
 
   return (
-    <div>
-      homepage
+    <div className={styles.homepage}>
+      <PageHeader>
+        Home
+      </PageHeader>
     </div>
   );
 }
