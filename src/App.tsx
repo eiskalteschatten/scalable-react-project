@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { AppProviderWrapper } from './App.context';
 import ErrorBoundary from './shared/compoonents/ErrorBoundry';
 import RootModule from './modules/RootModule';
 import PostsModule from './modules/PostsModule';
@@ -13,14 +14,16 @@ const App: React.FC = () => {
   // This is where all of the top-level modules should be registered including their root-route.
 
   return (
-    <ErrorBoundary>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/posts' element={<PostsModule />} />
-          <Route path='*' element={<RootModule />} />
-        </Routes>
-      </BrowserRouter>
-    </ErrorBoundary>
+    <AppProviderWrapper>
+      <ErrorBoundary>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/posts' element={<PostsModule />} />
+            <Route path='*' element={<RootModule />} />
+          </Routes>
+        </BrowserRouter>
+      </ErrorBoundary>
+    </AppProviderWrapper>
   );
 }
 
