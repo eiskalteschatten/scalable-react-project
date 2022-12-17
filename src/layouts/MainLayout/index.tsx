@@ -1,5 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 
+import Header from './Header';
+
 import './MainLayout.module.scss';
 
 const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
@@ -7,6 +9,8 @@ const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div>
+      <Header />
+
       {children}
     </div>
   );
