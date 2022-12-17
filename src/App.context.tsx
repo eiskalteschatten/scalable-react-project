@@ -1,4 +1,4 @@
-import React, { createContext, useLayoutEffect, useState } from 'react';
+import React, { createContext, PropsWithChildren, useLayoutEffect, useState } from 'react';
 
 import { WINDOW_WIDTHS } from './shared/constants/window';
 
@@ -20,11 +20,7 @@ const Context = createContext<IContext>({
 });
 /* eslint-enable @typescript-eslint/no-unused-vars */
 
-interface Props {
-  children?: React.ReactNode;
-}
-
-const AppProviderWrapper: React.FC<Props> = ({ children }) => {
+const AppProviderWrapper: React.FC<PropsWithChildren> = ({ children }) => {
   const [pageIsLoading, setPageIsLoading] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(defaultWindowWidth);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
