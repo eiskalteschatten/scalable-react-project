@@ -20,7 +20,7 @@ const Context = createContext<IContext>({
 });
 /* eslint-enable @typescript-eslint/no-unused-vars */
 
-const AppProviderWrapper: React.FC<PropsWithChildren> = ({ children }) => {
+const AppContextProviderWrapper: React.FC<PropsWithChildren> = ({ children }) => {
   const [pageIsLoading, setPageIsLoading] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(defaultWindowWidth);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -52,4 +52,4 @@ const AppProviderWrapper: React.FC<PropsWithChildren> = ({ children }) => {
   );
 };
 
-export { AppProviderWrapper, Context as AppContext };
+export { AppContextProviderWrapper, Context as AppContext };
