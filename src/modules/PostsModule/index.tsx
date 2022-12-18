@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+import { PostsModuleContextProviderWrapper } from './PostsModule.context';
 import MainLayout from '../../layouts/MainLayout';
 import AllPosts from './pages/AllPosts';
 
@@ -9,11 +10,13 @@ const PostsModule: React.FC = () => {
   // It is responsible for the home page (located at "/posts") as defined in the App.tsx
 
   return (
-    <MainLayout>
-      <Routes>
-        <Route path='/' element={<AllPosts />} />
-      </Routes>
-    </MainLayout>
+    <PostsModuleContextProviderWrapper>
+      <MainLayout>
+        <Routes>
+          <Route path='/' element={<AllPosts />} />
+        </Routes>
+      </MainLayout>
+    </PostsModuleContextProviderWrapper>
   );
 }
 
