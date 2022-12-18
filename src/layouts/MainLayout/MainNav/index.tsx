@@ -22,6 +22,6 @@ const MainNav: React.FC = () => {
       </NavLink>
     </div>
   );
-}
+};
 
 export default MainNav;

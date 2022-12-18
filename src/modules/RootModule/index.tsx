@@ -21,6 +21,6 @@ const RootModule: React.FC = () => {
       </Routes>
     </MainLayout>
   );
-}
+};
 
 export default RootModule;

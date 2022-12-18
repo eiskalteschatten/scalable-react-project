@@ -25,6 +25,6 @@ const App: React.FC = () => {
       </ErrorBoundary>
     </AppContextProviderWrapper>
   );
-}
+};
 
 export default App;

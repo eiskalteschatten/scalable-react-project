@@ -14,6 +14,6 @@ const Header: React.FC = () => {
       <MainNav />
     </div>
   );
-}
+};
 
 export default Header;

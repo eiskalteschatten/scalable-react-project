@@ -14,6 +14,6 @@ const PageHeader: React.FC<Props> = ({ className, children, ...rest }) => {
       {children}
     </h1>
   );
-}
+};
 
 export default PageHeader;

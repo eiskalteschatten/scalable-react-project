@@ -17,6 +17,6 @@ const Homepage: React.FC = () => {
       </PageHeader>
     </div>
   );
-}
+};
 
 export default Homepage;

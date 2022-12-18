@@ -19,6 +19,6 @@ const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <Footer />
     </>
   );
-}
+};
 
 export default MainLayout;

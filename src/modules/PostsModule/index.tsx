@@ -18,6 +18,6 @@ const PostsModule: React.FC = () => {
       </MainLayout>
     </PostsModuleContextProviderWrapper>
   );
-}
+};
 
 export default PostsModule;

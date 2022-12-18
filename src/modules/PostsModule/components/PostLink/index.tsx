@@ -15,6 +15,6 @@ const PostLink: React.FC<Props> = ({ post }) => {
       <div className={styles.summary}>{post.summary}</div>
     </div>
   );
-}
+};
 
 export default PostLink;

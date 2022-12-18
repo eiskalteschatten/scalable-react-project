@@ -20,6 +20,6 @@ const PrivacyStatement: React.FC = () => {
       We don't collect data, so there's nothing to see here.
     </div>
   );
-}
+};
 
 export default PrivacyStatement;
