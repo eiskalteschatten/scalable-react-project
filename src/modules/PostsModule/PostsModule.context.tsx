@@ -36,4 +36,4 @@ const PostsModuleContextProviderWrapper: React.FC<PropsWithChildren> = ({ childr
   );
 };
 
-export { PostsModuleContextProviderWrapper, Context as AppContext };
+export { PostsModuleContextProviderWrapper, Context as PostsModuleContext };
