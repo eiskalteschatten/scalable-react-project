@@ -3,4 +3,5 @@ export interface Post {
   summary: string;
   body: string;
   author: string;
+  slug: string;
 }

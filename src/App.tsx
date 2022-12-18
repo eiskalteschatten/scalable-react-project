@@ -18,7 +18,7 @@ const App: React.FC = () => {
       <ErrorBoundary>
         <BrowserRouter>
           <Routes>
-            <Route path='/posts' element={<PostsModule />} />
+            <Route path='/posts/*' element={<PostsModule />} />
             <Route path='*' element={<RootModule />} />
           </Routes>
         </BrowserRouter>

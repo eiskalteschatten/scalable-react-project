@@ -21,8 +21,12 @@ const PostsModuleContextProviderWrapper: React.FC<PropsWithChildren> = ({ childr
   // Since this demo app doesn't have a backend, it's going to asynchronously import the data
   // from a separate file instead.
   const fetchPosts = async () => {
-    const posts = (await import('./posts')).default;
-    setPosts(posts);
+    if (!posts || posts.length === 0) {
+      const _posts = (await import('./posts')).default;
+      setPosts(_posts);
+      return _posts;
+    }
+
     return posts;
   };
 

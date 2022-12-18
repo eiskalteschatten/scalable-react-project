@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Post } from '../../interfaces/posts';
 
@@ -11,7 +12,9 @@ interface Props {
 const PostLink: React.FC<Props> = ({ post }) => {
   return (
     <div className={styles.postLink}>
-      <h2 className={styles.title}>{post.title}</h2>
+      <NavLink to={`/posts/${post.slug}`}>
+        <h2 className={styles.title}>{post.title}</h2>
+      </NavLink>
       <div className={styles.summary}>{post.summary}</div>
     </div>
   );

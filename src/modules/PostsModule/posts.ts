@@ -6,12 +6,14 @@ export const posts: Post[] = [
     summary: 'I made yet another awesome post.',
     body: 'This post might not really have any content, but it sure is awesome anyway.',
     author: 'Me',
+    slug: 'ive-done-it-again',
   },
   {
     title: 'My Awesome Post',
     summary: 'I made an awesome post.',
     body: 'I always like making posts, so I made an awesome one.',
     author: 'Me',
+    slug: 'my-awesome-post',
   },
 ];
 
