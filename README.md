@@ -109,6 +109,11 @@ The official recommendation for folder nest from the React project is ["as flat 
 
 While the structure above does make use of nested folders, it is designed to limit them as much as possible. The deepest folder should never be deeper than four or five levels deep from the `src` folder to avoid wonky imports. The most deeply-nested folder in this structure can be found at `modules/pages/components/[ComponentName]`.
 
+### Naming Conventions
+Consistent naming conventions are vital for larger projects. They make files and their functions predictable for both old and new developers alike.
+
+The approach taken by this project is to consistently name files after the module, page or component they inherit from. This name combined with its function (i.e. `[PageName].service.ts` or `[ModuleName].context.ts`), combine to form an easily distguishable name that says exactly what the file does. The exceptions to this rule are the `index.tsx` files which serve as the base of each directory as well as where it doesn't make sense such as helpers, hooks, etc.
+
 ---
 
 Alex Seifert - https://www.alexseifert.com
