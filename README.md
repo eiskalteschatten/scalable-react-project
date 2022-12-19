@@ -20,13 +20,13 @@ Modules are the largest building blocks. They can contain multiple pages (routes
 
 Each module should be divided into logical units that make sense for your application. An example for a web store could be:
 
-- Products
-- Cart
-- UserAccount
-- LandingPages
+- ProductModule
+- CartModule
+- UserAccountModule
+- LandingPageModule
 - etc…
 
-The RootModule is the only “required” module. This is where the homepage and the 404 page reside. Static pages that don’t require much logic, such as a privacy statement page, could be added here as well.
+The RootModule is the only "required" module. This is where the homepage and the 404 page reside. Static pages that don’t require much logic, such as a privacy statement page, could be added here as well.
 
 ### Page
 A page is where a route will land. It can contain multiple components and services, but should only have one context at most.
