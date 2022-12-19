@@ -111,7 +111,7 @@ shared (Anything that is shared between multiple modules, components, etc should
 ```
 
 ### Folder Nesting
-The official recommendation for folder nest from the React project is ["as flat as possible"](https://reactjs.org/docs/faq-structure.html#avoid-too-much-nesting).
+The official recommendation for folder nesting from the React project is ["as flat as possible"](https://reactjs.org/docs/faq-structure.html#avoid-too-much-nesting).
 
 While the structure above does make use of nested folders, it is designed to limit them as much as possible. The deepest folder should never be deeper than four or five levels deep from the `src` folder to avoid wonky imports. The most deeply-nested folder in this structure can be found at `modules/pages/components/[ComponentName]`.
 
