@@ -151,6 +151,8 @@ The project is organized such that contexts are hierarchical:
 - `[ModuleName].context.tsx` is used for module states that affect multiple pages within that module. The provider is included in the `index.tsx` of the module.
 - `[PageName].context.tsx` is used for page states that affect multiple components within that page. The provider is included in the `index.tsx` of the module and wrapped around the page component in the `<Route>`. This is so that the page itself has access to it.
 
+As a general rule, local state should be preferred. This means that state should be kept at the lowest possible level to avoid unnecessary rerendering. Contexts should only be used if the state truly affects multiple sub-components.
+
 ## Contributing
 I would love to hear any feedback, suggestions, questions, etc you might have:
 
