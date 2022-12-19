@@ -58,8 +58,10 @@ App.tsx
 App.scss
 App.context.tsx (The application context for global state)
 App.test.tsx
-assets (Images, fonts, etc)
-i18n (This is where translations would go)
+assets
+└─── Images, fonts, etc
+i18n
+└───  Translations, etc
 modules
 └─── [ModuleName]
 │   │    index.tsx (Where the routes are defined)
