@@ -47,60 +47,61 @@ It is recommended to add them at module-level to maintain flexibility. If you ne
 
 ## Project Structure
 
+The following structure should reside in the `src` folder which was left out for brevity in the diagram below:
+
 ```
-src
-│    index.tsx
-│    App.tsx
-│    App.scss
-│    App.context.tsx
-│    App.test.tsx
-│    assets (Images, fonts, etc)
-│    i18n (This is where translations would go)
-└─── modules
-│   └─── [ModuleName]
-│   │   │    index.tsx - Where the routes are defined
-│   │   │    [ModuleName].context.tsx
-│   │   │    [ModuleName].test.tsx
-│   └─── pages
-│   │   │    [PageName]
-│   │   │    index.tsx
-│   │   │    [PageName].module.scss
-│   │   │    [PageName].service.ts
-│   │   │    [PageName].context.tsx
-│   │   │    [PageName].test.tsx
-│   │   └─── [ComponentName]
-│   │   │   │    index.tsx
-│   │   │   │    [ComponentName].module.scss
-│   │   │   │    [ComponentName].test.tsx
-│   │   │   │    [ComponentName].interfaces.ts
-│   │   └─── components (Modules can have components that are shared across multiple pages)
-│   │   │   └─── [ComponentName]
-│   │   │   │   │   index.tsx
-│   │   │   │   │   [ComponentName].module.scss
-│   │   │   │   │   [ComponentName].test.tsx
-│   │   │   │   │   [ComponentName].interfaces.ts
-│   │   └─── interfaces (Modules can have shared TypeScript interfaces)
-│   │   └─── hooks
-│   │   └─── etc...
-└─── layouts
-│   └─── [LayoutName]
-│   │   │    index.tsx
-│   │   │    [LayoutName].module.scss
-│   │   └─── [ComponentName]
-│   │   │   │    index.tsx
-│   │   │   │    [ComponentName].module.scss
-│   │   │   │    [ComponentName].test.tsx
-│   │   │   │    [ComponentName].interfaces.ts
-└─── shared (Anything that is shared between multiple modules, components, etc should go here)
-│   └─── components
-│   │   │    [ComponentName]
+index.tsx
+App.tsx
+App.scss
+App.context.tsx
+App.test.tsx
+assets (Images, fonts, etc)
+i18n (This is where translations would go)
+modules
+└─── [ModuleName]
+│   │    index.tsx - Where the routes are defined
+│   │    [ModuleName].context.tsx
+│   │    [ModuleName].test.tsx
+└─── pages
+│   │    [PageName]
+│   │    index.tsx
+│   │    [PageName].module.scss
+│   │    [PageName].service.ts
+│   │    [PageName].context.tsx
+│   │    [PageName].test.tsx
+│   └─── [ComponentName]
 │   │   │    index.tsx
 │   │   │    [ComponentName].module.scss
 │   │   │    [ComponentName].test.tsx
 │   │   │    [ComponentName].interfaces.ts
-│   └─── services
-│   └─── helpers
-│   └─── etc…
+│   └─── components (Modules can have components that are shared across multiple pages)
+│   │   └─── [ComponentName]
+│   │   │   │   index.tsx
+│   │   │   │   [ComponentName].module.scss
+│   │   │   │   [ComponentName].test.tsx
+│   │   │   │   [ComponentName].interfaces.ts
+│   └─── interfaces (Modules can have shared TypeScript interfaces)
+│   └─── hooks
+│   └─── etc...
+layouts
+└─── [LayoutName]
+│   │    index.tsx
+│   │    [LayoutName].module.scss
+│   └─── [ComponentName]
+│   │   │    index.tsx
+│   │   │    [ComponentName].module.scss
+│   │   │    [ComponentName].test.tsx
+│   │   │    [ComponentName].interfaces.ts
+shared (Anything that is shared between multiple modules, components, etc should go here)
+└─── components
+│   │    [ComponentName]
+│   │    index.tsx
+│   │    [ComponentName].module.scss
+│   │    [ComponentName].test.tsx
+│   │    [ComponentName].interfaces.ts
+└─── services
+└─── helpers
+└─── etc…
 ```
 
 ---
