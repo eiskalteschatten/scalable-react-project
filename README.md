@@ -8,6 +8,7 @@ An experimental example of how to structure a React project to make it scalable.
 ## Table of Contents
 
 - <a href="#terminology">Terminology</a>
+- <a href="#project-structure">Project Structure</a>
 
 ## Terminology
 
@@ -43,6 +44,64 @@ Layouts are a sort of scaffolding for your application. They contain the page de
 
 It is recommended to add them at module-level to maintain flexibility. If you need multiple layouts per module, you should probably rethink your code division.
 
+
+## Project Structure
+
+```
+src
+│    index.tsx
+│    App.tsx
+│    App.scss
+│    App.context.tsx
+│    App.test.tsx
+│    assets (Images, fonts, etc)
+│    i18n (This is where translations would go)
+└─── modules
+│   └─── [ModuleName]
+│   │   │    index.tsx - Where the routes are defined
+│   │   │    [ModuleName].context.tsx
+│   │   │    [ModuleName].test.tsx
+│   └─── pages
+│   │   │    [PageName]
+│   │   │    index.tsx
+│   │   │    [PageName].module.scss
+│   │   │    [PageName].service.ts
+│   │   │    [PageName].context.tsx
+│   │   │    [PageName].test.tsx
+│   │   └─── [ComponentName]
+│   │   │   │    index.tsx
+│   │   │   │    [ComponentName].module.scss
+│   │   │   │    [ComponentName].test.tsx
+│   │   │   │    [ComponentName].interfaces.ts
+│   │   └─── components (Modules can have components that are shared across multiple pages)
+│   │   │   └─── [ComponentName]
+│   │   │   │   │   index.tsx
+│   │   │   │   │   [ComponentName].module.scss
+│   │   │   │   │   [ComponentName].test.tsx
+│   │   │   │   │   [ComponentName].interfaces.ts
+│   │   └─── interfaces (Modules can have shared TypeScript interfaces)
+│   │   └─── hooks
+│   │   └─── etc...
+└─── layouts
+│   └─── [LayoutName]
+│   │   │    index.tsx
+│   │   │    [LayoutName].module.scss
+│   │   └─── [ComponentName]
+│   │   │   │    index.tsx
+│   │   │   │    [ComponentName].module.scss
+│   │   │   │    [ComponentName].test.tsx
+│   │   │   │    [ComponentName].interfaces.ts
+└─── shared (Anything that is shared between multiple modules, components, etc should go here)
+│   └─── components
+│   │   │    [ComponentName]
+│   │   │    index.tsx
+│   │   │    [ComponentName].module.scss
+│   │   │    [ComponentName].test.tsx
+│   │   │    [ComponentName].interfaces.ts
+│   └─── services
+│   └─── helpers
+│   └─── etc…
+```
 
 ---
 
