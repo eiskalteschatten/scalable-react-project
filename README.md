@@ -9,6 +9,7 @@ An experimental example of how to structure a React project to make it scalable.
 
 - <a href="#terminology">Terminology</a>
 - <a href="#project-structure">Project Structure</a>
+- <a href="#file-division">File Division</a>
 
 ## Terminology
 
@@ -31,7 +32,7 @@ A page is where a route will land. It can contain multiple components and servic
 Pages also set their own page titles.
 
 ### Service
-This is where application logic happens such as data processing, etc. Services should be built using a useService hook by default so that they have access to other hooks, i.e. useContext hooks.
+This is where application logic happens such as data processing, etc. Services for modules, pages and components should be built using a `useService` hook by default so that they have access to other hooks, i.e. useContext hooks.
 
 ### Context
 This is where data is stored. Optionally, it can be fetched and sent from a context as well.
@@ -67,8 +68,8 @@ modules
 │   │    index.tsx
 │   │    [PageName].module.scss
 │   │    [PageName].service.ts
-│   │    [PageName].context.tsx
 │   │    [PageName].test.tsx
+│   │    [PageName].interfaces.ts
 │   └─── [ComponentName]
 │   │   │    index.tsx
 │   │   │    [ComponentName].module.scss
@@ -113,6 +114,30 @@ While the structure above does make use of nested folders, it is designed to lim
 Consistent naming conventions are vital for larger projects. They make files and their functions predictable for both old and new developers alike.
 
 The approach taken by this project is to consistently name files after the module, page or component they inherit from. This name combined with its function (i.e. `[PageName].service.ts` or `[ModuleName].context.ts`), combine to form an easily distguishable name that says exactly what the file does. The exceptions to this rule are the `index.tsx` files which serve as the base of each directory as well as where it doesn't make sense such as helpers, hooks, etc.
+
+## File Division
+File division should follow the priciple of "one file, one purpose". The purpose should be defined in the file name (see above, "Naming Conventions").
+
+There are a few examples of code division below. Every project is slightly different in terms of its file requirements and so each module, page, component, etc should be made accordingly. The important thing is that there is a clear division that is easily definable by a single word to be put in the file name.
+
+### Modules
+- `index.tsx` - Routes within the module should be defined here as well as the layout the module uses. The layout should be defined in the `src/layouts` folder.
+- `[ModuleName].context.tsx` - If the module needs a context, it should be defined here.
+- `[ModuleName].test.tsx` - The test for the module routes.
+
+### Pages
+- `index.tsx` - This is where markup the code for the page resides. The only logic this file should contain is anything directly pertaining to the display or layout of the entire page.
+- `[PageName].service.ts` - The service is where the business logic should happen. This includes any data handling, etc needed for the page.
+- `[PageName].module.scss` - This is where any CSS belongs that is directly used by this page.
+- `[PageName].test.tsx` - The test for the page.
+- `[PageName].interfaces.ts` - This is where any necessary TypeScript interfaces should reside that affect the entire page.
+
+### Components
+- `index.tsx` - Like with the page, this is where markup the code resides. The only logic this file should contain is anything directly pertaining to the display or layout of the entire page.
+- `[ComponentName].module.scss` - This is where any CSS belongs that is directly used by this page.
+- `[ComponentName].test.tsx` - The test for the page.
+- `[ComponentName].interfaces.ts` - This is where any necessary TypeScript interfaces should reside.
+
 
 ---
 
