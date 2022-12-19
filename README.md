@@ -10,6 +10,7 @@ This project is constantly evolving and I would love to hear any feedback, sugge
 - <a href="#terminology">Terminology</a>
 - <a href="#project-structure">Project Structure</a>
 - <a href="#file-division">File Division</a>
+- <a href="#state-management">State Management</a>
 - <a href="#contributing">Contributing</a>
 
 ## Terminology
@@ -55,13 +56,13 @@ The following structure should reside in the `src` folder which was left out for
 index.tsx
 App.tsx
 App.scss
-App.context.tsx
+App.context.tsx (The application context for global state)
 App.test.tsx
 assets (Images, fonts, etc)
 i18n (This is where translations would go)
 modules
 └─── [ModuleName]
-│   │    index.tsx - Where the routes are defined
+│   │    index.tsx (Where the routes are defined)
 │   │    [ModuleName].context.tsx
 │   │    [ModuleName].test.tsx
 └─── pages
@@ -69,6 +70,7 @@ modules
 │   │    index.tsx
 │   │    [PageName].module.scss
 │   │    [PageName].service.ts
+│   │    [PageName].context.tsx
 │   │    [PageName].test.tsx
 │   │    [PageName].interfaces.ts
 │   └─── [ComponentName]
@@ -130,6 +132,7 @@ There are a few examples of code division below. Every project is slightly diffe
 - `index.tsx` - This is where markup the code for the page resides. The only logic this file should contain is anything directly pertaining to the display or layout of the entire page.
 - `[PageName].service.ts` - The service is where the business logic should happen. This includes any data handling, etc needed for the page.
 - `[PageName].module.scss` - This is where any CSS belongs that is directly used by this page.
+- `[PageName].context.tsx` - If the page needs a context, is should be defined here.
 - `[PageName].test.tsx` - The test for the page.
 - `[PageName].interfaces.ts` - This is where any necessary TypeScript interfaces should reside that affect the entire page.
 
@@ -138,6 +141,15 @@ There are a few examples of code division below. Every project is slightly diffe
 - `[ComponentName].module.scss` - This is where any CSS belongs that is directly used by this page.
 - `[ComponentName].test.tsx` - The test for the page.
 - `[ComponentName].interfaces.ts` - This is where any necessary TypeScript interfaces should reside.
+
+## State Management
+The eagle-eyed amongst you may have noticed there there is no Redux or other state-mangement system in this project. That is because it uses contexts that React provides natively. Redux and other tools were born before React offered cross-component state management natively. By only using contexts, you significantly reduce your chunk sizes and your boilerplating.
+
+The project is organized such that contexts are hierarchical:
+
+- `App.context.tsx` is used for global application state. The provider is included in `App.tsx`.
+- `[ModuleName].context.tsx` is used for module states that affect multiple pages within that module. The provider is included in the `index.tsx` of the module.
+- `[PageName].context.tsx` is used for page states that affect multiple components within that page. The provider is included in the `index.tsx` of the module and wrapped around the page component in the `<Route>`. This is so that the page itself has access to it.
 
 ## Contributing
 I would love to hear any feedback, suggestions, questions, etc you might have:
