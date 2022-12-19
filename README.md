@@ -2,7 +2,7 @@
 
 An experimental example of how to structure a React project to make it scalable.
 
-**This project is just beginning.** More information about the structure, etc will become available here once it is finalized.
+This project is constantly evolving and I would love to hear any feedback, suggestions, questions, etc you might have. See the <a href="#contributing">Contributing</a> section for more information on that.
 
 
 ## Table of Contents
@@ -10,6 +10,7 @@ An experimental example of how to structure a React project to make it scalable.
 - <a href="#terminology">Terminology</a>
 - <a href="#project-structure">Project Structure</a>
 - <a href="#file-division">File Division</a>
+- <a href="#contributing">Contributing</a>
 
 ## Terminology
 
@@ -138,6 +139,13 @@ There are a few examples of code division below. Every project is slightly diffe
 - `[ComponentName].test.tsx` - The test for the page.
 - `[ComponentName].interfaces.ts` - This is where any necessary TypeScript interfaces should reside.
 
+## Contributing
+I would love to hear any feedback, suggestions, questions, etc you might have:
+
+- Feedback, questions, discussions, etc: https://github.com/eiskalteschatten/scalable-react-project/discussions
+- Suggestions, corrections, etc: https://github.com/eiskalteschatten/scalable-react-project/issues
+
+Also, feel free to fork and create a pull request!
 
 ---
 
